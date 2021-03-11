@@ -7,11 +7,11 @@ const isAndroid = Platform.OS === 'android';
 export default function App() {
   return (
   <>
-    <SafeAreaView style={{felx:1, marginTop: StatusBar.currentHeight}}>
+    <SafeAreaView style={{flex:1, marginTop: StatusBar.currentHeight}}>
       <View style={{padding:16, backgroundColor:"green"}}>
         <Text>Search</Text>
       </View>
-      <View style={{ padding:16, backgroundColor:"blue"}}>
+      <View style={{ flex:1,padding:16, backgroundColor:"blue"}}>
         <Text>List</Text>
       </View>
     </SafeAreaView>
