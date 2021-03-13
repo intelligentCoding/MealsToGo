@@ -1,5 +1,6 @@
 import styled from "styled-components/native";
-
+import { SvgXml } from "react-native-svg";
+import { Card } from "react-native-paper";
 export const Address = styled.Text`
   font-family: ${(props) => props.theme.fonts.body};
   font-size: ${(props) => props.theme.fontSizes.caption};
