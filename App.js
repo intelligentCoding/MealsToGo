@@ -11,7 +11,6 @@ import { ThemeProvider } from "styled-components/native";
 import { theme } from "./src/infrastructure/theme";
 import { SafeArea } from "./src/components/util/safe-area.component";
 import { Ionicons } from "@expo/vector-icons";
-
 const Tab = createBottomTabNavigator();
 const TAB_ICON = {
   Restaurants: "md-restaurant",
