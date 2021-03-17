@@ -1,6 +1,4 @@
 import React, { createContext, useState } from "react";
-import { restaurantsRequest } from "../restaurants/restaurants.service";
-
 export const FavouritesContext = createContext();
 
 export const FavouritesContextProvider = ({ children }) => {
