@@ -18,7 +18,8 @@ const hint = (theme) => `
 `;
 
 const error = (theme) => `
-    color: ${theme.colors.text.error};
+background-color: red;
+    color: white;
 `;
 
 const caption = (theme) => `

@@ -33,18 +33,18 @@ if (!firebase.apps.length) {
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  useEffect(() => {
-    firebase
-      .auth()
-      .signInWithEmailAndPassword("kash@gmail.com", "testing")
-      .then((user) => {
-        console.log(user);
-        setIsAuthenticated(true);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }, []);
+  // useEffect(() => {
+  //   firebase
+  //     .auth()
+  //     .signInWithEmailAndPassword("kash@gmail.com", "testing")
+  //     .then((user) => {
+  //       console.log(user);
+  //       setIsAuthenticated(true);
+  //     })
+  //     .catch((e) => {
+  //       console.log(e);
+  //     });
+  // }, []);
   const [oswaldLoaded] = useOswald({
     Oswald_400Regular,
   });

@@ -5,6 +5,7 @@ import {
   AccountContainer,
   AccountCover,
   AuthButton,
+  Title,
 } from "../components/account.style";
 import { Button } from "react-native-paper";
 export const AccountScreen = ({ navigation }) => {
@@ -12,6 +13,8 @@ export const AccountScreen = ({ navigation }) => {
     <AccountBackground>
       <AccountCover />
       <AccountContainer>
+        <Title>Meal Scout</Title>
+        <Spacer size="large"></Spacer>
         <AuthButton
           icon="lock-open-outline"
           mode="contained"
