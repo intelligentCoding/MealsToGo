@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
 import { Spacer } from "../../../components/spacer/spacer.component";
+import LottieView from "lottie-react-native";
+
 import {
   AccountBackground,
   AccountContainer,
   AccountCover,
   AuthButton,
   Title,
+  AnimationWrapper,
 } from "../components/account.style";
 import { Button } from "react-native-paper";
-
 export const AccountScreen = ({ navigation }) => {
   useEffect(() => {
     console.log("in account screen ");
@@ -16,9 +18,18 @@ export const AccountScreen = ({ navigation }) => {
   return (
     <AccountBackground>
       <AccountCover />
+      <AnimationWrapper>
+        <LottieView
+          key="animation"
+          autoPlay
+          loop
+          resizeMode="cover"
+          source={require("../../../../assets/heart.json")}
+        />
+      </AnimationWrapper>
+      <Title>Meal Scout</Title>
       <AccountContainer>
-        <Title>Meal Scout</Title>
-        <Spacer size="large"></Spacer>
+        <Spacer size="large" />
         <AuthButton
           icon="lock-open-outline"
           mode="contained"
