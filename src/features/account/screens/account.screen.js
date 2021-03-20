@@ -13,9 +13,6 @@ import {
 import { Button } from "react-native-paper";
 
 export const AccountScreen = ({ navigation }) => {
-  useEffect(() => {
-    console.log("in account screen ");
-  }, []);
   return (
     <AccountBackground>
       <AccountCover />
