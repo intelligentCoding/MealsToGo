@@ -7,10 +7,20 @@ export const AuthenticationContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
-  
+
   const onRenderNewScreen = () => {
     setError(null);
   };
+
+  firebase.auth().onAuthStateChanged((usr) => {
+    if (usr) {
+      setUser(usr);
+      setIsLoading(false);
+    } else {
+      setIsLoading(false);
+    }
+  });
+
   const onLogin = (email, password) => {
     console.log("in login");
     setIsLoading(true);
@@ -65,6 +75,12 @@ export const AuthenticationContextProvider = ({ children }) => {
         setError(e.toString());
       });
   };
+
+  const onLogout = () => {
+    setUser(null);
+    firebase.auth().signOut();
+  };
+
   return (
     <AuthenticationContext.Provider
       value={{
@@ -75,6 +91,7 @@ export const AuthenticationContextProvider = ({ children }) => {
         onLogin: onLogin,
         onRegister: onRegister,
         onRenderNewScreen: onRenderNewScreen,
+        onLogout: onLogout,
       }}
     >
       {children}
