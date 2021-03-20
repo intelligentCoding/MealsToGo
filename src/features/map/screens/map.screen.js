@@ -43,6 +43,7 @@ export const MapsScreen = ({ navigation }) => {
                 latitude: restaurant.geometry.location.lat,
                 longitude: restaurant.geometry.location.lng,
               }}
+              pinColor={"#000000"}
             >
               <MapView.Callout
                 onPress={() =>

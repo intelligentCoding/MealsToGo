@@ -8,6 +8,7 @@ export const Address = styled.Text`
 
 export const Info = styled.View`
   padding: ${(props) => props.theme.space[3]};
+  background-color: rgba(74, 1, 67, 0.3);
 `;
 export const Rating = styled.View`
   flex-direction: row;
@@ -31,7 +32,7 @@ export const RestaurantCard = styled(Card)`
 `;
 export const RestaurantCardCover = styled(Card.Cover)`
   padding: ${(props) => props.theme.space[3]}
-  background-color: ${(props) => props.theme.colors.bg.primary}
+  background-color: rgba(74, 1, 67, 1);
 `;
 
 export const Icon = styled.Image`
