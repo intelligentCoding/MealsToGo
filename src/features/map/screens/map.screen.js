@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from "react";
-import { View } from "react-native";
 import MapView from "react-native-maps";
 import styled from "styled-components/native";
 import { LocationContext } from "../../../services/location/location.context";
@@ -11,7 +10,6 @@ const Map = styled(MapView)`
   width: 100%;
 `;
 
-const SomeText = styled.Text``;
 export const MapsScreen = ({ navigation }) => {
   const { location } = useContext(LocationContext);
   const { restaurants = [] } = useContext(RestaurantsContext);

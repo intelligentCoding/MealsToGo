@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import LottieView from "lottie-react-native";
 
@@ -10,7 +10,6 @@ import {
   Title,
   AnimationWrapper,
 } from "../components/account.style";
-import { Button } from "react-native-paper";
 
 export const AccountScreen = ({ navigation }) => {
   return (
