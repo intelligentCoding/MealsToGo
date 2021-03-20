@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import {
   AccountBackground,
@@ -8,7 +8,11 @@ import {
   Title,
 } from "../components/account.style";
 import { Button } from "react-native-paper";
+
 export const AccountScreen = ({ navigation }) => {
+  useEffect(() => {
+    console.log("in account screen ");
+  }, []);
   return (
     <AccountBackground>
       <AccountCover />

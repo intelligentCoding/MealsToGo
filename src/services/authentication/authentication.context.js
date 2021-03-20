@@ -7,22 +7,47 @@ export const AuthenticationContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
-
+  
+  const onRenderNewScreen = () => {
+    setError(null);
+  };
   const onLogin = (email, password) => {
+    console.log("in login");
     setIsLoading(true);
-    loginRequest(email, password)
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
       .then((u) => {
+        console.log(u);
         setUser(u);
         setIsLoading(false);
       })
       .catch((e) => {
+        console.log(e);
         setIsLoading(false);
         setError(e.toString());
       });
+    // firebase
+    //   .auth()
+    //   .signInWithEmailAndPassword(email, password)
+    //   .then((u) => {
+    //     console.log(u);
+    //     setUser(u);
+    //     setIsLoading(false);
+    //   })
+    //   .catch((e) => {
+    //     setIsLoading(false);
+    //     setError(e.toString());
+    //   });
   };
 
   const onRegister = (email, password, repeatedPassword) => {
     setIsLoading(true);
+    if (!email || !password) {
+      setIsLoading(false);
+      setError("Must enter email and password");
+      return;
+    }
     if (password !== repeatedPassword) {
       setIsLoading(false);
       setError("Error: Passwords do not match");
@@ -37,7 +62,7 @@ export const AuthenticationContextProvider = ({ children }) => {
       })
       .catch((e) => {
         setIsLoading(false);
-        setError(e.toString);
+        setError(e.toString());
       });
   };
   return (
@@ -49,6 +74,7 @@ export const AuthenticationContextProvider = ({ children }) => {
         error,
         onLogin: onLogin,
         onRegister: onRegister,
+        onRenderNewScreen: onRenderNewScreen,
       }}
     >
       {children}

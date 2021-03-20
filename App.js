@@ -19,12 +19,12 @@ import { AuthenticationContextProvider } from "./src/services/authentication/aut
 // Initialize Firebase
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyCp948VsmXuB1_GofjSbJITu5XUzj3DO0o",
-  authDomain: "mealstogo-adf20.firebaseapp.com",
-  projectId: "mealstogo-adf20",
-  storageBucket: "mealstogo-adf20.appspot.com",
-  messagingSenderId: "677943760452",
-  appId: "1:677943760452:web:463567acdaa9113f784e11",
+  apiKey: "AIzaSyC--jZFyXzLMcOEzOqR-XP7Ja7ZD2JgBn0",
+  authDomain: "mealsscout123.firebaseapp.com",
+  projectId: "mealsscout123",
+  storageBucket: "mealsscout123.appspot.com",
+  messagingSenderId: "194874515224",
+  appId: "1:194874515224:web:4fb8e98b0cfa34040e486d",
 };
 // Initialize Firebase
 if (!firebase.apps.length) {
@@ -32,19 +32,6 @@ if (!firebase.apps.length) {
 }
 
 export default function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  // useEffect(() => {
-  //   firebase
-  //     .auth()
-  //     .signInWithEmailAndPassword("kash@gmail.com", "testing")
-  //     .then((user) => {
-  //       console.log(user);
-  //       setIsAuthenticated(true);
-  //     })
-  //     .catch((e) => {
-  //       console.log(e);
-  //     });
-  // }, []);
   const [oswaldLoaded] = useOswald({
     Oswald_400Regular,
   });
