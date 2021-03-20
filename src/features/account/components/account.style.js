@@ -37,8 +37,7 @@ export const Title = styled(Text)`
   font-size: 30px;
   color: white;
   background-color: rgba(74, 1, 67, 0.7);
-  padding: 80px 20px 20px 20px;
-  margin-top: 40px;
+  padding: 25px;
   font-family: ${(props) => props.theme.fonts.heading};
   font-weight: ${(props) => props.theme.fontWeights.bold};
 `;
@@ -53,7 +52,7 @@ export const ErrorContainer = styled.View`
 
 export const AnimationWrapper = styled.View`
   width: 100%;
-  height: 60%;
+  height: 30%;
   position: absolute;
   top: 30px;
   z-index: 9999;
